@@ -2,7 +2,15 @@ import type { Segments, TrackerPlatformInfo } from './tracker';
 
 export type Platform = 'steam' | 'epic' | 'psn' | 'xbl';
 
-export type TPlaylists = 'Ranked Duel 1v1' | 'Ranked Doubles 2v2' | 'Ranked Standard 3v3' | 'Hoops' | 'Rumble' | 'Dropshot' | 'Snowday';
+export type TPlaylists =
+    | 'Ranked Duel 1v1'
+    | 'Ranked Doubles 2v2'
+    | 'Ranked Standard 3v3'
+    | 'Hoops'
+    | 'Rumble'
+    | 'Dropshot'
+    | 'Snowday'
+    | 'Tournament Matches';
 export type Ranks =
     | 'Unranked'
     | 'Bronze I'

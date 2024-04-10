@@ -106,6 +106,21 @@ test('Snowday', async () => {
     expect(result).toHaveProperty('peakRating');
 });
 
+test('Tournament Matches', async () => {
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getTournament();
+
+    expect(result).toHaveProperty('rank');
+    expect(result).toHaveProperty('tier');
+    expect(result).toHaveProperty('division');
+    expect(result).toHaveProperty('deltaUp');
+    expect(result).toHaveProperty('deltaDown');
+    expect(result).toHaveProperty('matchesPlayed');
+    expect(result).toHaveProperty('winStreak');
+    expect(result).toHaveProperty('rating');
+    expect(result).toHaveProperty('peakRating');
+});
+
 test('Overview', async () => {
     const api = new API(PLATFORM.Epic, 'lil McNugget');
     const result = await api.overview();

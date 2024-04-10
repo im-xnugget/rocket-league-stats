@@ -267,6 +267,21 @@ export class API {
     }
 
     /**
+     * Get the Tournament rank data of the user
+     * @param options - The options for the API
+     * @returns The Tournament rank data of the user
+     * @example
+     * const api = new API(PLATFORM.EPIC, 'lil McNugget')
+     * const data = await api.getTournament()
+     * console.log(data)
+     * @throws {Error} - If the Tournament data is not found
+     * @throws {Error} - If the user data is not found
+     */
+    public getTournament(options?: GenericOptions): Promise<PlaylistStats> {
+        return this.getRankData('Tournament Matches', options);
+    }
+
+    /**
      * Get the user data
      * @description Get all ranks and overview data for the user
      * @param options - The options for the API
