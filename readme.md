@@ -29,34 +29,34 @@ Example code:
 import { API, PLATFORM } from 'rocket-league-stats';
 
 async function main() {
-    const api = new API(PLATFORM.Epic, 'lil McNugget');
-    const data1s = await api.get1v1();
-    console.log(data1s);
-    const data2s = await api.get2v2();
-    console.log(data2s);
-    const data3s = await api.get3v3();
-    console.log(data3s);
-    const dataHS = await api.getDropshot();
-    console.log(dataHS);
-    const dataH = await api.getHoops();
-    console.log(dataH);
-    const dataR = await api.getRumble();
-    console.log(dataR);
-    const dataS = await api.getSnowday();
-    console.log(dataS);
-    const dataAll = await api.getData();
-    console.log(dataAll);
-    const dataRaw = await api.getRaw();
-    console.log(dataRaw);
+	const api = new API(PLATFORM.Epic, 'lil McNugget');
+	const data1s = await api.get1v1();
+	console.log(data1s);
+	const data2s = await api.get2v2();
+	console.log(data2s);
+	const data3s = await api.get3v3();
+	console.log(data3s);
+	const dataHS = await api.getDropshot();
+	console.log(dataHS);
+	const dataH = await api.getHoops();
+	console.log(dataH);
+	const dataR = await api.getRumble();
+	console.log(dataR);
+	const dataS = await api.getSnowday();
+	console.log(dataS);
+	const dataAll = await api.getData();
+	console.log(dataAll);
+	const dataRaw = await api.getRaw();
+	console.log(dataRaw);
 
-    const data1sFresh = await api.get1v1({
-        fresh: true,
-    });
-    console.log(data1sFresh);
+	const data1sFresh = await api.get1v1({
+		fresh: true,
+	});
+	console.log(data1sFresh);
 }
 
 main().catch((err) => {
-    console.log(err);
+	console.log(err);
 });
 ```
 
