@@ -41,7 +41,7 @@
         "build": "bun rimraf ./dist && bun tsup",
         "start": "bun dist/index.js",
         "publish": "npm publish",
-        "build:publish": "bun run build && bun run publish"
+        "build:publish": "bun run build && npm publish"
     },
     "type": "module",
     "types": "./dist/index.d.ts",
