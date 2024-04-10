@@ -48,6 +48,7 @@ The data is by default stored for 60 seconds from the first request to limit the
 ## Sample Code
 
 ```js
+
 import { API, PLATFORM } from 'rocket-league-stats';
 
 async function main() {
@@ -66,6 +67,8 @@ async function main() {
 	console.log(dataR);
 	const dataS = await api.getSnowday();
 	console.log(dataS);
+	const dataT = await api.getTournament();
+	console.log(dataT)
 	const dataAll = await api.getData();
 	console.log(dataAll);
 	const dataRaw = await api.getRaw();
