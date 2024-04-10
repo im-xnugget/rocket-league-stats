@@ -1,6 +1,8 @@
 import type { AllStats, GenericOptions, InitializeOptions, OverviewStats, Platform, PlaylistStats, TPlaylists, Userinfo } from './types/internal';
 import type { SegmentOverviewStats, SegmentPlaylistStats, Segments, SegmentsPlaylist, TrackerResponse } from './types/tracker';
 
+export type { AllStats, GenericOptions, InitializeOptions, OverviewStats, Platform, PlaylistStats, TPlaylists, Userinfo };
+
 export const PLATFORM = {
     Steam: 'steam',
     Epic: 'epic',

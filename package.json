@@ -1,10 +1,10 @@
 {
     "name": "rocket-league-stats",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "author": "im-xnugget",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/im-xnugget/rocket-league-stats.git"
+        "url": "https://github.com/im-xnugget/rocket-league-stats.git"
     },
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -36,6 +36,9 @@
         "trnetwork"
     ],
     "license": "GPL-3.0",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "scripts": {
         "test": "bun test",
         "build": "bun rimraf ./dist && bun tsup",
