@@ -38,9 +38,6 @@
     ],
     "license": "GPL-3.0",
     "packageManager": "bun@1.1.2",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "scripts": {
         "test": "bun test",
         "build": "bun rimraf ./dist && bun tsup",
