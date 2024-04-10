@@ -2,8 +2,8 @@ import { expect, test } from 'bun:test';
 import { API, PLATFORM } from '../src';
 
 test('1v1', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.get1v1();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.get1v1();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -17,8 +17,8 @@ test('1v1', async () => {
 });
 
 test('2v2', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.get2v2();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.get2v2();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -32,8 +32,8 @@ test('2v2', async () => {
 });
 
 test('3v3', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.get3v3();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.get3v3();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -47,8 +47,8 @@ test('3v3', async () => {
 });
 
 test('Hoops', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getHoops();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getHoops();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -62,8 +62,8 @@ test('Hoops', async () => {
 });
 
 test('Rumble', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getRumble();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getRumble();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -77,8 +77,8 @@ test('Rumble', async () => {
 });
 
 test('Dropshot', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getDropshot();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getDropshot();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -92,8 +92,8 @@ test('Dropshot', async () => {
 });
 
 test('Snowday', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getSnowday();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getSnowday();
 
     expect(result).toHaveProperty('rank');
     expect(result).toHaveProperty('tier');
@@ -107,8 +107,8 @@ test('Snowday', async () => {
 });
 
 test('Overview', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.overview();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.overview();
 
     expect(result).toHaveProperty('wins');
     expect(result).toHaveProperty('goals');
@@ -124,8 +124,8 @@ test('Overview', async () => {
 });
 
 test('All', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getData();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getData();
 
     expect(result).toHaveProperty('overview');
     expect(result).toHaveProperty('gamemodes');
@@ -139,8 +139,8 @@ test('All', async () => {
 });
 
 test('UserInfo', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'lil McNugget');
-    const result = await RLAPI.getUserinfo();
+    const api = new API(PLATFORM.Epic, 'lil McNugget');
+    const result = await api.getUserinfo();
 
     expect(result).toHaveProperty('platform');
     expect(result).toHaveProperty('uuid');
@@ -150,9 +150,9 @@ test('UserInfo', async () => {
 });
 
 test('Invalid user', async () => {
-    const RLAPI = new API(PLATFORM.Epic, 'iojherogiuhoighjneriopghjnerg0ipe');
+    const api = new API(PLATFORM.Epic, 'iojherogiuhoighjneriopghjnerg0ipe');
     try {
-        await RLAPI.fetchUser();
+        await api.fetchUser();
     } catch (e) {
         expect(e).toBeInstanceOf(Error);
     }
