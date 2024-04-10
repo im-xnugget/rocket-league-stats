@@ -1,0 +1,46 @@
+{
+    "name": "rocket-league-stats",
+    "version": "1.0.1",
+    "author": "im-xnugget",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/im-xnugget/rocket-league-stats.git"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "bun-plugin-dts-auto": "^0.10.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "bugs": {
+        "url": "https://github.com/im-xnugget/rocket-league-stats/issues"
+    },
+    "description": "Wrapper for rocket league stats.",
+    "files": [
+        "dist"
+    ],
+    "homepage": "https://github.com/im-xnugget/rocket-league-stats#readme",
+    "keywords": [
+        "rocket-league-api",
+        "rocket-league",
+        "rl",
+        "stats",
+        "rocket-league-stats",
+        "api",
+        "rocket league",
+        "trn",
+        "trnetwork"
+    ],
+    "license": "GPL-3.0",
+    "scripts": {
+        "test": "bun test",
+        "build": "bun tsup",
+        "start": "bun dist/index.js"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "packageManager": "bun@1.1.2"
+}
