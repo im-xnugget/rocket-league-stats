@@ -24,7 +24,28 @@ pnpm add rocket-league-stats
 bun a rocket-league-stats
 ```
 
-Example code:
+## Usage
+
+## Initialise
+
+#### Basic
+
+```typescript
+const api = new API(PLATFORM.Epic, 'lil McNugget');
+
+```
+
+#### Expiry
+
+The data is by default stored for 60 seconds from the first request to limit the number of requests to the API. This number can be adjusted with the following code
+
+```typescript
+ const api = new API(PLATFORM.Epic, 'lil McNugget', {
+  expiresAfter: 5000 // Sets the expiry to 5 seconds (5000 ms)
+ });
+```
+
+## Sample Code
 
 ```js
 import { API, PLATFORM } from 'rocket-league-stats';
