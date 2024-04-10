@@ -8,6 +8,7 @@
     <h2>This a wrapper/scrapper of the TRNetwork site with <b>Rocket League</b> stats.</h2>
     <h3>There are no dependencies nor API key required.</h3>
 <i>This project is built upon <a href="https://github.com/iFraan/rocketleague.js" alt="rocketleague.js Link">rocketleague.js</a></i>
+</div>
 
 To install use:
 
