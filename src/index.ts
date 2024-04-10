@@ -158,7 +158,7 @@ class API {
         };
     }
 
-    async getRaw(options: GenericOptions): Promise<TrackerResponse> {
+    async getRaw(options?: GenericOptions): Promise<TrackerResponse> {
         if (!this.raw) await this.fetchUser();
         if (!this.raw) throw new Error('No data found');
         if (this.lastFetch + this.expiresAfter < Date.now() || options?.fresh) await this.fetchUser();
